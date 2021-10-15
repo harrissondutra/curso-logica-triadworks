@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script>
+    var valorGasolina = 6.70;
+    var capacidadeTanque = 42;
+    var percorreu = 360;
+
+    function novaLinha(){
+        document.write("<br>")
+    }
+
+    var custoEncherTanque = function(){
+        return valorGasolina * capacidadeTanque;
+    }
+
+    var quilometroPorLitro = function(){
+        return percorreu / capacidadeTanque;
+    }
+
+    document.write("Valor da Gasolina: " + valorGasolina);
+    novaLinha();
+    document.write("Capacidade do tanque: " + capacidadeTanque) ;
+    novaLinha();
+    document.write("Total percorrido: " + percorreu);
+    novaLinha();
+    document.write("Quilômetros por litro " + quilometroPorLitro() + " Por litro");
+
+
+
+</script>
