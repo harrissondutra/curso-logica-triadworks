@@ -1,0 +1,50 @@
+<meta charset="utf-8">
+<script>
+
+    var ano = 2021;
+    var diasDoAno = 365;
+    var idadeGuilherme = 15;
+    var idadeNahan =15;
+    var idadeWilliam = 9;
+    var idadeGabriel = 4;
+    var idadeArthur = 1;
+
+    var diasGuilherme = idadeGuilherme * diasDoAno;
+    var diasNahan = idadeNahan * diasDoAno;
+    var diasWilliam = idadeWilliam * diasDoAno;
+    var diasGabriel = idadeGabriel * diasDoAno;
+    var diasArthur = idadeArthur * diasDoAno;
+
+    var totalDias = diasGuilherme + diasNahan + diasWilliam + diasGabriel + diasArthur;
+    var mediaDias = totalDias / 5;
+
+    var novaLinha = function novalinha(){
+        document.write("<br>");
+    }
+
+    var linha = function linha(){
+        document.write("<hr>");
+    }
+
+    var exibirTotais = function exibirTotais(){
+        linha();
+        document.write("Total de dias: " + totalDias);
+        novaLinha();
+        document.write("Média de dias: " + mediaDias);
+       linha();
+    }
+
+    document.write("Nome: " +  "Guilherme Frota - " + "Idade: " + idadeGuilherme +" - Guilherme nasceu em: " + (ano - idadeGuilherme) + " e já viveu: " + diasGuilherme + " dias") ;
+    novaLinha();
+    document.write("Nome: " +  "Nahan Frota - " + " Idade: " + idadeNahan + " -  Nahan nasceu em: " + (ano - idadeNahan) + " e já viveu: " + diasNahan + " dias");
+    novaLinha();
+    document.write("Nome: " +  "William Frota - " + " Idade: " + idadeWilliam + " - William nasceu em: " + (ano -idadeWilliam) + " e já viveu: " + diasGuilherme + " dias");
+    novaLinha();
+    document.write("Nome: " +  "Gabriel Frota - " + " Idade: " + idadeGabriel + " -  Gabriel nasceu em: "+ (ano - idadeGabriel) + " e já viveu: " + diasGabriel + " dias");
+    novaLinha();
+    document.write("Nome: " +  "Arthur Frota - " + " Idade: " + idadeArthur + " -  Arthur nasceu em: " + (ano - idadeArthur) + " e já viveu: " + diasGabriel + " dias");
+    novaLinha();
+
+    exibirTotais();
+    
+</script>
