@@ -1,21 +1,14 @@
 <meta charset="utf-8">
 <script>
-    var ano = 2021;
+    
     var diasDoAno = 365;
-    var idadeGuilherme = 15;
-    var idadeNahan =15;
-    var idadeWilliam = 9;
-    var idadeGabriel = 4;
-    var idadeArthur = 1;
-
-    var diasGuilherme = idadeGuilherme * diasDoAno;
-    var diasNahan = idadeNahan * diasDoAno;
-    var diasWilliam = idadeWilliam * diasDoAno;
-    var diasGabriel = idadeGabriel * diasDoAno;
-    var diasArthur = idadeArthur * diasDoAno;
-
-    var totalDias = diasGuilherme + diasNahan + diasWilliam + diasGabriel + diasArthur;
-    var mediaDias = totalDias / 5;
+        
+    var calculoTotalDeDias = function(){
+        return diasGuilherme + diasNahan + diasWilliam + diasGabriel + diasArthur;
+    }
+    var calculoMediaDeDias = function(){
+        return calculoTotalDeDias() / 5;
+    }    
 
     var novaLinha = function(){
         document.write("<br>");
@@ -27,9 +20,9 @@
 
     var exibirTotais = function(){
         linha();
-        document.write("Total de dias: " + totalDias);
+        document.write("Total de dias: " + calculoTotalDeDias());
         novaLinha();
-        document.write("Média de dias: " + mediaDias);
+        document.write("Média de dias: " + calculoMediaDeDias());
        linha();
     }
 
@@ -38,12 +31,60 @@
         novaLinha();
     }
 
-    exibirAmigo("Guilharme Frota", idadeGuilherme, ano, diasGuilherme);
-    exibirAmigo("Nahan Frota", idadeNahan, ano, diasNahan);
-    exibirAmigo("William Frota", idadeWilliam, ano, diasWilliam);
-    exibirAmigo("Gabriel Frota", idadeGabriel, ano, diasGabriel);
-    exibirAmigo("Arthur Frota", idadeArthur, ano, diasArthur);
 
+    var entradaGuilherme = function(){
+        var nome = prompt("Qual o nome do seu amigo 1?");
+        var idade = prompt("Qual a idade dele?");
+        var ano = prompt("Em que ano estamos?");
+        diasGuilherme = idade * diasDoAno;
+
+        exibirAmigo(nome, idade, ano, diasGuilherme);
+
+    }
+    var entradaNahan = function(){
+        var nome = prompt("Qual o nome do seu amigo 2?");
+        var idade = prompt("Qual a idade dele?");
+        var ano = prompt("Em que ano estamos?");
+        diasNahan = idade * diasDoAno;
+
+        exibirAmigo(nome, idade, ano, diasNahan);
+
+    }
+    var entradaWilliam = function(){
+        var nome = prompt("Qual o nome do seu amigo 3?");
+        var idade = prompt("Qual a idade dele?");
+        var ano = prompt("Em que ano estamos?");
+        diasWilliam = idade * diasDoAno;
+
+        exibirAmigo(nome, idade, ano, diasWilliam);
+
+    }
+    var entradaGabriel = function(){
+        var nome = prompt("Qual o nome do seu amigo 4?");
+        var idade = prompt("Qual a idade dele?");
+        var ano = prompt("Em que ano estamos?");
+        diasGabriel = idade * diasDoAno;
+
+        exibirAmigo(nome, idade, ano, diasGabriel);
+
+    }
+    var entradaArthur = function(){
+        var nome = prompt("Qual o nome do seu amigo 5?");
+        var idade = prompt("Qual a idade dele?");
+        var ano = prompt("Em que ano estamos?");
+        diasArthur = idade * diasDoAno;
+
+        exibirAmigo(nome, idade, ano, diasArthur);
+
+    }
+
+
+    entradaGuilherme();
+    entradaNahan();
+    entradaWilliam();
+    entradaGabriel();
+    entradaArthur();
+    
     exibirTotais();
  
  
