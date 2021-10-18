@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script>
+    
+
+    var possuemOMesmoTamanho = function(textoUM, textoDOIS){
+        return textoUM.length > textoDOIS.length;
+    }
+
+      var nomesIguais = function(){
+        var texto1 = prompt("Digite o primeiro nome");
+        var texto2 = prompt("Digite o segundo nome");
+
+        if(texto1 == texto2 || possuemOMesmoTamanho(texto1, texto2)){
+            document.write("Os textos são iguais: " + texto1 + "<br> e possuem o mesmo tamanho.");
+        } else {
+        document.write("Os textos são diferentes: " + texto1 + " - " + texto2);
+        }
+
+    }
+  
+
+    nomesIguais();
+
+
+</script>
