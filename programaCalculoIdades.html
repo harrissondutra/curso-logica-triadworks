@@ -1,4 +1,7 @@
 <meta charset="utf-8">
+
+Entre com a informação: 
+<input type="submit" id="campoTexto" />
 <script>
     
     var diasDoAno = 365;
@@ -38,6 +41,18 @@
 
     var executarPrograma = function(){
         var qtdAmigos = prompt("Quantos amigos quer calcular?");
+
+        var testaNumero = true;
+
+        while(testaNumero){
+            if(qtdAmigos == "" || qtdAmigos == 0 || isNaN(qtdAmigos)){
+            qtdAmigos = prompt("Não entendi, qtos amigos mesmo?");
+            testaNumero = true;
+            }else{
+                testaNumero = false;
+            }
+        }
+      
         for (var x = 0; x < qtdAmigos; x++){
             var nome = prompt("Qual o nome do seu amigo " + (x + 1) +" ?" );
             var idade = prompt("Qual a idade dele?");
