@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+
+Digite seu chute: <input type="text" id="numero"/>
+<input type="submit" id="btAdvinhar" value="Tente a sorte!"/>
+
+<script>
+    var mostra = function(valor){
+        document.write(valor + "<br>")
+    }
+
+    var sorteio = [2, 3, 5, 8];
+    var inputNumero = document.getElementById("numero");
+
+    
+    var tentaAdivinhar = function(){
+        var chute = inputNumero.value;
+
+        for (var tentativa = 0; tentativa <= sorteio.length; tentativa++){
+            if (chute == sorteio[tentativa]){
+                mostra("Que sorte hein, eu pensei no " + chute + " E vc tb");
+                break;
+            }
+            else{
+                if(chute < sorteio[tentativa]){
+                    mostra(numeroMaior());
+                }
+                if(chute > sorteio[tentativa]){
+                    mostra(numeroMenor());
+                }
+                chute = prompt("Vamos tentar novamente." + " Tentativa: " + tentativa)
+            }
+        }
+       
+    }
+    
+        var numeroMaior = function(){
+            return "Que pena, o número é maior que o escolhido por vc."
+        }
+    
+        var numeroMenor = function(){
+            return "Que pena, o número é menor que o escolhido por vc."
+        }
+    
+
+        var btAdvinhar = document.getElementById("btAdvinhar");
+    btAdvinhar.onclick = tentaAdivinhar;
+
+</script>
