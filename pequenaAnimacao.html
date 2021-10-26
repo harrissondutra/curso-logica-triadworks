@@ -1,0 +1,47 @@
+<canvas id="meuCanvas" width="600" height="400"></canvas>
+
+<script>
+    var tela = document.getElementById("meuCanvas");
+    var pincel = tela.getContext("2d");
+
+    var circulo = function(x, y, raio){
+        pincel.fillStyle = "red";
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*Math.PI);
+        pincel.fill();
+    }
+
+    var limpaTela = function(){
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    for(var i = 0; i < 600; i++){
+        limpaTela();
+        circulo(i, 100, 10);
+
+    }   
+
+    var x = 1;
+    var desenhar = function(){
+        limpaTela();
+        circulo(x*5, 100, 10);
+        x++;
+        
+        
+        if(x == 500){
+            limpaTela();
+            circulo(x, 100, 10);
+            x--; 
+
+        }
+    
+        
+    }
+
+
+   setInterval(desenhar, 30);
+
+  
+  
+
+</script>
